@@ -449,20 +449,7 @@ Easily one of Emacs' best features, this editor paradigm transforms the editing 
 					; adding (interactive) to lambdas and functions allows them to be available in the M-x menu
 ;; dtrt-indent link-hint
 ;; (add-hook 'prog-mode-hook 'display-line-numbers)
-(defmacro k-time (&rest body)
-  "Measure and return the time it takes evaluating BODY."
-  `(let ((time (current-time)))
-     ,@body
-     (float-time (time-since time))))
-;; Set garbage collection threshold to 1GB.
-					;(setq gc-cons-threshold #x40000000)
-
-;; When idle for 15sec run the GC no matter what.
-					;(defvar k-gc-timer
-					;  (run-with-idle-timer 15 t
-					;                       (lambda ()
-					;                         (message "Garbage Collector has run for %.06fsec"
-					;                                  (k-time (garbage-collect))))))
+(add-to-list 'auto-mode-alist '("~/.aliases" . sh-mode))
 (use-package togetherly)
 (use-package htmlize)
 (use-package consult)
