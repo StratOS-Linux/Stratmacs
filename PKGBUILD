@@ -12,7 +12,7 @@ license=('GPL-3.0-or-later')
 optdepends=(
     'git: Magit'
     # 'cmake'
-    # 'vterm: Terminal emulator'
+    'vterm: Terminal emulator'
     'pandoc-bin: nigh-universal document conversion tool'
     'mu: Email client'
     'notmuch: Email client'
@@ -65,7 +65,7 @@ source=(
 )
 b2sums=('9163ba6bfab1010a156c669ac085ad363545d73e3ffac21c710b14b618df61a4c6a80a50fd3fa81d852c2ccace5080e614b679606fa584e28509f99ad6196784'
         'SKIP')
-validpgpkeys=('17E90D521672C04631B1183EE78DAE0F3115E06B') # Eli Zaretskii <eliz@gnu.org>
+# validpgpkeys=('17E90D521672C04631B1183EE78DAE0F3115E06B') # Eli Zaretskii <eliz@gnu.org>
 prepare() {
   cp -a emacs-${pkgver} ${srcdir}/emacs-${pkgver}-pgtk
   cp -a emacs-${pkgver} ${srcdir}/emacs-${pkgver}-lucid
