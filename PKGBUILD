@@ -12,7 +12,7 @@ license=('GPL-3.0-or-later')
 optdepends=(
     'git: Magit'
     # 'cmake'
-    'vterm: Terminal emulator'
+    'libvterm: Terminal emulator'
     'pandoc-bin: nigh-universal document conversion tool'
     'mu: Email client'
     'notmuch: Email client'
