@@ -106,10 +106,10 @@ _build_emacs_variant() {
 }
 
 build() {
-  _build_emacs_variant pgtk --with-pgtk --without-native-compilation --without-xwidgets
-  _build_emacs_variant lucid --with-x-toolkit=lucid --without-native-compilation # --with-xwidgets
-  _build_emacs_variant pgtk-nativecomp --with-pgtk --with-native-compilation --without-xwidgets
-  _build_emacs_variant lucid-nativecomp --with-x-toolkit=lucid --with-native-compilation # --with-xwidgets
+  _build_emacs_variant pgtk --with-pgtk --with-native-compilation=no --without-xwidgets
+  _build_emacs_variant lucid --with-x-toolkit=lucid --with-native-compilation=no # --with-xwidgets
+  _build_emacs_variant pgtk-nativecomp --with-pgtk --with-native-compilation=yes --without-xwidgets
+  _build_emacs_variant lucid-nativecomp --with-x-toolkit=lucid --with-native-compilation=yes # --with-xwidgets
 }
 
 _package_emacs_variant() {
